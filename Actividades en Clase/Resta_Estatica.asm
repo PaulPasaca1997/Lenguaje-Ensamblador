@@ -1,5 +1,4 @@
-;Anderson Quizhpe
-;
+
 ;Resta de dos numeros estaticos
 
 section .data
