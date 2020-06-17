@@ -1,5 +1,4 @@
-;Anderson Quizhpe
-;
+
 ;Multiplicacion de dos numeros estaticos
 
 section .data
