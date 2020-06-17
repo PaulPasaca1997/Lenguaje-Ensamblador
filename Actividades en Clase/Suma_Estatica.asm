@@ -4,18 +4,18 @@
 
 
 section .data
-	resultado db "La suma es: "
+	resultado db "La suma es:",10
 	len_resultado equ $-resultado
 
-	enter db " "
-	len_enter equ $-enter 
+	line db " ",10
+	len_line equ $-line 
 	 
 
 section .bss
 	suma resb 1
 
 section .text
-	global_start 
+	global _start 
 _start: 
 
 	;IMPRIME
@@ -41,8 +41,8 @@ _start:
 
 	mov eax, 4		
 	mov ebx, 1		
-	mov ecx, enter 
-	mov edx, len_enter 	 	
+	mov ecx, line 
+	mov edx, len_line 	 	
 	int 80H
 
 

@@ -6,7 +6,7 @@ len_mensaje equ $-mensaje
 ;section .bss
 
 section .text
-	global_start 
+	global _start 
 _start: 
 
 	;IMPRIME

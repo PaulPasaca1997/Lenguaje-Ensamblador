@@ -6,8 +6,8 @@ section .data
 	resultado db "La suma es: "
 	len_resultado equ $-resultado
 
-	enter db " "
-	len_enter equ $-enter 
+	line db " "
+	len_line equ $-line 
 	 
 	numero1 db "Ingrese primer numero:"
 	len_numero1 equ $-numero1 
@@ -22,21 +22,21 @@ section .bss
 	suma resb 1
 
 section .text
-	global_start 
+	global _start 
 _start: 
 
 	;IMPRIME MENSAJE 1 
 	mov eax, 4		
 	mov ebx, 1		
-	add ecx, numero1
-	add edx, len_numero1 
+	mov ecx, numero1
+	mov edx, len_numero1 
 	int 80H	
 	
 	;LEE MENSAJE 1 
 	mov eax, 3		
 	mov ebx, 2		
-	add ecx, a
-	add edx, 2 
+	mov ecx, a
+	mov edx, 2 
 	int 80H	
 
 
@@ -44,15 +44,15 @@ _start:
 	;IMPRIME MENSAJE 2 
 	mov eax, 4		
 	mov ebx, 1		
-	add ecx, numero2
-	add edx, len_numero2 
+	mov ecx, numero2
+	mov edx, len_numero2 
 	int 80H	
 	
 	;LEE MENSAJE 2
 	mov eax, 3		
 	mov ebx, 2		
-	add ecx, b
-	add edx, 2 
+	mov ecx, b
+	mov edx, 2 
 	int 80H	
 
 
@@ -67,21 +67,21 @@ _start:
 	
 	mov eax, 4		
 	mov ebx, 1		
-	add ecx, resultado
-	add edx, len_resultado 
+	mov ecx, resultado
+	mov edx, len_resultado 
 	int 80H	
 
 	mov eax, 4		
 	mov ebx, 1		
-	add ecx, suma
-	add edx, 1
+	mov ecx, suma
+	mov edx, 1
 	int 80H
 
 
 	mov eax, 4		
 	mov ebx, 1		
-	add ecx, enter
-	add edx, len_enter 
+	mov ecx, line
+	mov edx, len_line 
 	int 80H
 
 
