@@ -1,5 +1,4 @@
-;Anderson Quizhpe
-;
+
 ;Division de dos numeros estaticos
 
 section .data
