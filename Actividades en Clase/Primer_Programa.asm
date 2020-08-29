@@ -1,3 +1,7 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
+
+
 %macro escribir 2
 	mov eax, 4
 	mov ebx, 1
