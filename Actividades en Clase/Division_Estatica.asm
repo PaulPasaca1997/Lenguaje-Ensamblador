@@ -1,3 +1,6 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
+
 
 ;Division de dos numeros estaticos
 
