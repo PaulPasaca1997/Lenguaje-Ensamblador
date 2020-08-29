@@ -1,4 +1,5 @@
-
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
 ;Suma de dos numeros ingresados por teclado
 
 
