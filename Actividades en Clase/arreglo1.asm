@@ -1,3 +1,6 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
+
 segment .data
 	arreglo db 3,2,0,7,5
 	len_arreglo equ $-arreglo 
