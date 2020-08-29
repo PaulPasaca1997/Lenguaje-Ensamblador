@@ -1,3 +1,7 @@
+
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
+
 section .data
         mensaje db 'Ingrese un numero', 10
         len_mensaje equ $-mensaje
