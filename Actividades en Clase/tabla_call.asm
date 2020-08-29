@@ -1,3 +1,5 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
 
 section .data
     msj1 db " * "
