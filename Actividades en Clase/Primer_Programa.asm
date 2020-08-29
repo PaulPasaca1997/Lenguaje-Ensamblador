@@ -1,21 +1,58 @@
+%macro escribir 2
+	mov eax, 4
+	mov ebx, 1
+	mov ecx, %1
+	mov edx, %2
+	int 0x80
+%endmacro
 
-section .data
-mensaje db "Mi  primera vez con NASM"
-len_mensaje equ $-mensaje 
+segment .data
+	msj1 db "Leer el archivo", 10
+	len_msj1 equ $-msj1
 
-;section .bss
+	;archivo db "/home/rene/Desktop/ensamblador/archivo.txt"
+	archivo db "/home/paul/Escritorio/Ensamblador/resultados.txt"
 
-section .text
-	global _start 
-_start: 
+segment .bss
+	texto resb 30
+	idarchivo resd 1
 
-	;IMPRIME
-	mov eax, 4		;tipo de subrutina, operacion, escritura
-	mov ebx, 1		;tipo de estandar, por teclado 
-	mov ecx, mensaje	;se almacena el mensaje	
-	mov edx, len_mensaje 	;se almacena la referencia a imprimir por # de caracteres
-	int 80H			;interrupcion de linux 
+segment .text
+	global _start
 
-	mov eax,1		;salida del programa
-	mov ebx,0		;si el retorno es 0 (200 en la web) ok
-	int 80H
+_start:
+	; ************************** abrir el archivo **************************
+	mov eax, 5		;servicio para crear archivos, trabajar con archivos    ;operación de open
+	mov ebx, archivo	; dirección del archivo
+	mov ecx, 0		
+	mov edx, 777h
+	int 80h
+	
+	test eax, eax		
+	jz salir	
+	
+	mov dword [idarchivo], eax
+
+	escribir msj1, len_msj1
+	
+	; ************************** leer el archivo **************************
+	mov eax, 3
+	mov ebx, [idarchivo]	
+	mov ecx, texto		
+	mov edx, 15
+	int 80h
+	
+	escribir texto, 15
+	
+	; ************************** cerrar el archivo **************************
+	mov eax, 6		; close
+	mov ebx, [idarchivo]	
+	mov ecx, 0		
+	mov edx, 0
+	int 80h
+	
+salir:
+	mov eax, 1
+	int 80h
+	
+	
