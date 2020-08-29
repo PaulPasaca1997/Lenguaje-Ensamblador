@@ -1,4 +1,6 @@
 
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
 
 section .data
 saludo db 'Hola',10
