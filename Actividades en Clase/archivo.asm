@@ -1,4 +1,5 @@
-
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
 
 
 %macro escribir 2
