@@ -1,3 +1,5 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
 
 ;Multiplicacion de dos numeros estaticos
 
