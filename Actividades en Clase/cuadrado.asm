@@ -1,6 +1,5 @@
-
-
-;PAUL ALEXANDER PASACA CORONEL
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
 
 
 section .data	
