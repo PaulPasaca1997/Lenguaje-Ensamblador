@@ -1,3 +1,6 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
+
 ;Suma de dos numeros estaticos
 
 %macro imprimir 2 
