@@ -1,3 +1,6 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
+
 
 section .data
 	asterisco  db '*'
