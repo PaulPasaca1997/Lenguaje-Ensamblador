@@ -1,3 +1,6 @@
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
+
 section .data
 msg1 db "Ingrese 5 numeros", 10
 len1 equ $-msg1 
