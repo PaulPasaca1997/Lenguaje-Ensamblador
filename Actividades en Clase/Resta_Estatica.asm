@@ -1,4 +1,5 @@
-
+;Paul Alexander Pasaca Coronel
+;Sexto Ciclo
 ;Resta de dos numeros estaticos
 
 section .data
